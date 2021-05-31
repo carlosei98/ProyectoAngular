@@ -1,0 +1,331 @@
+<form id="content">
+    <h4>Asignación de progreso</h4>
+
+    <hr>
+    <div class="form-row">
+        <div class="form-group col-md-1">
+            <label>Nº Cambio</label>
+            <input type="text" class="form-control" value="{{maximo.wonum| uppercase}}" disabled>
+        </div>
+        <div class="form-group col-md-1" style="margin-left: 15px;">
+            <label>Estado</label>
+            <input type="text" class="form-control" value="{{ maximo.status | uppercase }}" disabled>
+        </div>
+        <div class="form-group col-md-1">
+
+            <input type="text" class="form-control" placeholder="" style="margin-top: 29.7px;" disabled>
+        </div>
+
+        <div class="form-group col-md-1" style="margin-left: 15px;">
+            <label>Canal</label>
+            <input type="text" class="form-control" value="{{ maximo.canal | uppercase }}" disabled>
+        </div>
+        <div class="form-group col-md-1" style="margin-left: 15px;">
+            <label>Grupo del creador</label>
+            <input type="text" class="form-control" value="{{ maximo.grupo_creador | uppercase }}" style="width: 150px;" disabled>
+        </div>
+        <div class="form-group col-md-1" style="margin-left: 55px;">
+            <label>¿Llamar al técnico?</label> <br>
+            <input class="form-check-input" type="checkbox" id="gridCheck" style="margin-left: 45px;">
+        </div>
+
+        <div class="form-group col-md-1" style="margin-left: 15px;">
+            <label>Pretest details</label>
+            <textarea type="text" class="form-control" style="width: 300px; height: 60px;" disabled></textarea>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <div class="form-row">
+        <div class="form-group col-md-1">
+            <label>Creado por:</label>
+            <input type="text" class="form-control" value="{{ maximo.creador | uppercase }}" disabled>
+        </div>
+
+        <div class="form-group col-md-2" style="margin-left: 15px;">
+            <label>Nombre</label>
+            <input type="text" class="form-control" disabled>
+        </div>
+        <div class="form-group col-md-1" style="margin-left: 15px;">
+            <label>¿Modification in progress?</label> <br>
+            <input class="form-check-input" type="checkbox" id="gridCheck" style="margin-left: 45px;">
+        </div>
+
+
+
+        <div class="form-group col-md-1" style="margin-left: 15px;">
+            <label>Grupo asignado</label>
+            <input type="text" class="form-control" style="width: 150px;" disabled>
+
+            <label style="margin-top: 18px;">Gestor de cambios</label>
+            <input type="text" class="form-control" style="width: 150px;" disabled>
+        </div>
+
+        <div class="form-group col-md-1" style="margin-left: 55px;">
+            <label>Telefono del técnico</label>
+            <input type="text" class="form-control" value="{{ maximo.telefono_tecnico | uppercase }}" disabled>
+        </div>
+
+        <div class="form-group col-md-1" style="margin-left: 55px; text-align: right;">
+            <label>Number documents</label>
+            <input type="text" class="form-control" style="text-align: right;" placeholder="0" disabled>
+        </div>
+
+    </div>
+
+
+    <h4>Objetivo principal</h4>
+
+    <hr>
+    <div class="form-row">
+
+        <div class="form-group col-md-2">
+            <label>Ambito:</label>
+            <input type="text" class="form-control" value="{{ maximo.ambito | uppercase }}" style="width: 130px;" disabled>
+
+
+            <div class="row g-1">
+                <div class="col">
+                    <label class="form-label">Propietario:</label>
+                    <input type="text" class="form-control" value="{{ maximo.propietario | uppercase }}" disabled />
+
+                </div>
+                <div class="col" style="margin-top: 9.5px;">
+                    <br>
+                    <input type="text" id="form9Example2" class="form-control" disabled/>
+
+                </div>
+            </div>
+
+
+
+            <label>Servicio TI:</label>
+            <input type="text" class="form-control" value="{{ maximo.servicioti | uppercase }}" disabled>
+
+            <label>Escenario:</label>
+            <input type="text" class="form-control" style="width: 150px;" disabled>
+
+            <div class="row g-1">
+                <div class="col">
+                    <label class="form-label">CI:</label>
+                    <input type="text" class="form-control" value="{{ maximo.cinum | uppercase }}" disabled />
+
+                </div>
+                <div class="col" style="margin-top: 9.5px;">
+                    <br>
+                    <input type="email" id="form9Example2" class="form-control" disabled/>
+
+                </div>
+            </div>
+
+            <label>Nombre del CI:</label>
+            <input type="text" class="form-control" value="{{ maximo.ci | uppercase }}" disabled>
+
+            <label>System Description:</label>
+            <input type="text" class="form-control" disabled>
+        </div>
+        <div class="form-group col-md-1" style="margin-left: 30px;">
+            <label>Cliente:</label>
+            <input type="text" class="form-control" value="{{ maximo.cliente | uppercase }}" disabled>
+            <label>Nombre:</label>
+            <input type="text" class="form-control" disabled>
+            <label>Impacto:</label>
+            <input type="text" class="form-control" value="{{ maximo.impacto | uppercase }}" disabled>
+            <label>Tipo de implementacion:</label>
+            <input type="text" class="form-control" value="{{ maximo.tipo_implementacion | uppercase }}" disabled>
+        </div>
+
+
+        <div class="form-group col-md-3" style="margin-left: 30px;">
+            <label>Descripcion de la gestion:</label>
+            <input type="text" class="form-control" placeholder="Arquitectura" disabled>
+            <label>Motivo del cambio:</label>
+            <input type="text" class="form-control" value="{{ maximo.motivo_cambio | uppercase }}" disabled>
+            <label>Descripción tecnica/funcional:</label>
+            <textarea type="text" class="form-control" placeholder="CANAL INFRAESTRUCTURA" style="width: 380px; height: 60px;" disabled></textarea>
+            <label>Descripcion de Impacto:</label>
+            <input type="text" class="form-control" value="{{ maximo.desc_impacto | uppercase }}" disabled>
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+    <h4>Impacto a negocio</h4>
+
+    <hr>
+
+    <div class="form-row">
+
+        <div class="form-group col-md-1">
+            <div class="form-group" style="margin-left: 15px;">
+                <label>Impacto de negocio</label>
+                <input type="text" class="form-control" value="{{ maximo.impacto_negocio | uppercase }}" disabled>
+            </div>
+            <div class="form-group col-md-1">
+                <label>¿Validación y certificación?</label> <br>
+                <input class="form-check-input" type="checkbox" id="gridCheck" style="margin-left: 35px;">
+            </div>
+
+
+        </div>
+
+        <div class="form-group col-md-1">
+            <div class="form-group" style="margin-left: 15px;">
+                <label>Afecta a aplicaciones VIP:</label>
+                <input type="text" class="form-control" value="{{ maximo.afecta_vip | uppercase }}" disabled>
+            </div>
+
+
+            <div class="form-group col-md-1">
+                <label>¿Contiene Componentes Criticos?</label> <br>
+                <input class="form-check-input" type="checkbox" id="gridCheck" style="margin-left: 35px;">
+            </div>
+
+        </div>
+
+
+        <div class="form-group col-md-1">
+            <div class="form-group" style="margin-left: 55px;">
+                <textarea type="text" class="form-control" placeholder="CANAL INFRAESTRUCTURA" style="width: 400px; height: 180px;"></textarea>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <h4>Detalles del cambio:</h4>
+
+    <hr>
+    <div class="form-row">
+
+        <div class="form-group col-md-3">
+            <label>Tipo de cambio:</label>
+            <input type="text" class="form-control" value="{{ maximo.tipo_cambio | uppercase }}" style="width: 120px;" disabled>
+
+            <label>Tipo de urgencia:</label>
+            <input type="text" class="form-control" style="width: 160px;" disabled>
+
+            <label>Motivo de la urgencia:</label>
+            <input type="text" class="form-control" disabled>
+
+            <label>Indisponibilidad durante la ejecución del cambio:</label>
+            <input type="text" class="form-control" value="{{ maximo.indisponibilidad | uppercase }}" style="width: 120px;" disabled>
+
+            <label>Descripción de la Indisponibilidad:</label>
+            <input type="text" class="form-control" disabled>
+        </div>
+        <div class="form-group col-md-2" style="margin-left: 30px;">
+            <label>¿Requiere IPL?</label>
+            <input type="text" class="form-control" value="{{ maximo.req_ipl | uppercase }}" style="width: 120px;" disabled>
+            <label>¿Requiere parar todo el batch de los objetivos adicionales?</label>
+            <input type="text" class="form-control" value="{{ maximo.req_batch | uppercase }}" style="width: 120px;" disabled>
+            <label>¿Requiere intervencion de PI?</label>
+            <input type="text" class="form-control" value="{{ maximo.req_pi | uppercase }}" style="width: 120px;" disabled>
+            <label>Change category:</label>
+            <input type="text" class="form-control" style="width: 120px;" disabled>
+        </div>
+
+
+        <div class="form-group col-md-2" style="margin-left: 30px;">
+            <label>Dia de inicio de la ejecución:</label>
+            <input type="text" class="form-control" style="width: 120px;" disabled>
+            <label>Inicio programado:</label>
+            <input type="text" class="form-control" value="{{ maximo.schedstart | uppercase }}" style="width: 160px;" disabled>
+            <label>Duracion estimada (Incl. marcha atrás):</label>
+            <input type="text" class="form-control" value="{{ maximo.duracion_estimada | uppercase }}" style="width: 120px;" disabled>
+            <label>Finalizacion programada:</label>
+            <input type="text" class="form-control" value="{{ maximo.schedfinish | uppercase }}" style="width: 160px;" disabled>
+            <label>Duración marcha atrás:</label>
+            <input type="text" class="form-control" value="{{ maximo.duracion_ma | uppercase }}" style="width: 120px;" disabled>
+        </div>
+
+
+        <div class="form-group col-md-2" style="margin-left: 30px;">
+            <label>Fecha creación:</label>
+            <input type="text" class="form-control" value="{{ maximo.fecha_creacion | uppercase }}" style="width: 160px;" disabled>
+            <label>Fecha Límite Entrega:</label>
+            <input type="text" class="form-control" value="{{ maximo.fecha_limite_entrega | uppercase }}" style="width: 160px;" disabled>
+            <label>Lead time en días:</label>
+            <input type="text" class="form-control" value="{{ maximo.leadtime | uppercase }}" style="width: 120px;" disabled>
+            <label>Categoria:</label>
+            <input type="text" class="form-control" value="{{ maximo.categoria | uppercase }}" style="width: 120px;" disabled>
+
+            <div class="form-group">
+                <label>¿Incumple ventana de cambios?</label> <br>
+                <input class="form-check-input" type="checkbox" id="gridCheck" style="margin-left: 35px;">
+            </div>
+
+        </div>
+        <div class="form-group col-md-2" style="margin-left: 30px;">
+
+
+            <div class="form-group">
+                <label>¿Requiere mitigación de site/centro?</label> <br>
+                <input class="form-check-input" type="checkbox" id="gridCheck" style="margin-left: 35px;">
+            </div>
+
+            <div class="form-group" style="margin-top: 30px;">
+                <label>¿Requiere roll-out?</label> <br>
+                <input class="form-check-input" type="checkbox" id="gridCheck" style="margin-left: 35px;">
+            </div>
+
+
+            <div class="form-group" style="margin-top: 30px;">
+                <label>¿Cambios en CMDB?</label> <br>
+                <input class="form-check-input" type="checkbox" id="gridCheck" style="margin-left: 35px;">
+            </div>
+
+            <div class="form-group" style="margin-top: 30px;">
+                <label>¿Cambios en documentación?</label> <br>
+                <input class="form-check-input" type="checkbox" id="gridCheck" style="margin-left: 35px;">
+            </div>
+
+            <div class="form-group" style="margin-top: 30px;">
+                <label>¿Afecta a réplicas?</label> <br>
+                <input class="form-check-input" type="checkbox" id="gridCheck" style="margin-left: 35px;">
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+</form>
+
+
+
+
+
+<style>
+    input,
+    textarea {
+        font-size: 10px;
+    }
+    
+    label {
+        font-size: 13px;
+    }
+</style>
