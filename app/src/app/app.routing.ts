@@ -5,6 +5,7 @@ import {Routes, RouterModule} from '@angular/router';
 import {HomeComponent} from './components/home.component';
 import {ConsultaMaximosComponent} from './components/consulta_maximos.component';
 import { ErrorComponent } from './components/error.component';
+import { CreacionMaximosComponent } from './components/creacion_maximos.component';
 
 
 const appRoutes: Routes =[
@@ -14,6 +15,7 @@ const appRoutes: Routes =[
 
 {path: 'consulta_maximos', component:ConsultaMaximosComponent},
 
+{path: 'creacion_maximos', component:CreacionMaximosComponent},
 
 {path: '**', component:ErrorComponent},
 ]

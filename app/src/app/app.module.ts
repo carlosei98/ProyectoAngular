@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { routing, appRoutingProviders } from './app.routing';
 import { ConsultaMaximosComponent } from './components/consulta_maximos.component';
+import { CreacionMaximosComponent } from './components/creacion_maximos.component';
 import { ErrorComponent } from './components/error.component';
 import { HomeComponent } from './components/home.component';
 import { MaximoComponent } from './components/maximo.component';
@@ -17,7 +18,8 @@ import { MaximoComponent } from './components/maximo.component';
     HomeComponent,
     ErrorComponent,
     ConsultaMaximosComponent,
-    MaximoComponent
+    MaximoComponent,
+    CreacionMaximosComponent
   ],
   imports: [
     BrowserModule,

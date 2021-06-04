@@ -28,5 +28,5 @@
             <button type="button" value="Enviar" (click)="enviarCodigo()" class="btn btn-primary" [disabled]="codeForm.invalid"> Enviar</button>
         </form>
         <br><br><br> <br>
-        <maximo [resultado]="code"></maximo>
+        <maximo [resultado]="code" [readOnly]="true"></maximo>
     </div>

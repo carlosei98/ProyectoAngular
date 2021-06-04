@@ -5,33 +5,34 @@
     <div class="form-row">
         <div class="form-group col-md-1">
             <label>Nº Cambio</label>
-            <input type="text" class="form-control" value="{{maximo.wonum| uppercase}}" disabled>
+            <input type="text" class="form-control" name="wonum" [(ngModel)]="maximo.wonum" value="{{maximo.wonum | uppercase}}" [readonly]="readOnly">
+
         </div>
         <div class="form-group col-md-1" style="margin-left: 15px;">
             <label>Estado</label>
-            <input type="text" class="form-control" value="{{ maximo.status | uppercase }}" disabled>
+            <input type="text" class="form-control" name="status" [(ngModel)]="maximo.status" value="{{ maximo.status | uppercase }}" [readonly]="readOnly">
         </div>
         <div class="form-group col-md-1">
 
-            <input type="text" class="form-control" placeholder="" style="margin-top: 29.7px;" disabled>
+            <input type="text" class="form-control" placeholder="" style="margin-top: 29.7px;" [readonly]="readOnly">
         </div>
 
         <div class="form-group col-md-1" style="margin-left: 15px;">
             <label>Canal</label>
-            <input type="text" class="form-control" value="{{ maximo.canal | uppercase }}" disabled>
+            <input type="text" class="form-control" name="canal" [(ngModel)]="maximo.canal" value="{{ maximo.canal | uppercase }}" [readonly]="readOnly">
         </div>
         <div class="form-group col-md-1" style="margin-left: 15px;">
             <label>Grupo del creador</label>
-            <input type="text" class="form-control" value="{{ maximo.grupo_creador | uppercase }}" style="width: 150px;" disabled>
+            <input type="text" class="form-control" name="grupo_creador" [(ngModel)]="maximo.grupo_creador" value="{{ maximo.grupo_creador | uppercase }}" style="width: 150px;" [readonly]="readOnly">
         </div>
         <div class="form-group col-md-1" style="margin-left: 55px;">
             <label>¿Llamar al técnico?</label> <br>
-            <input class="form-check-input" type="checkbox" id="gridCheck" style="margin-left: 45px;">
+            <input class="form-check-input" type="checkbox" id="gridCheck" style="margin-left: 45px;" name="llamar_tecnico" checked={{maximo.llamar_tecnico}} [(ngModel)]="maximo.llamar_tecnico" [readonly]="readOnly">
         </div>
 
         <div class="form-group col-md-1" style="margin-left: 15px;">
             <label>Pretest details</label>
-            <textarea type="text" class="form-control" style="width: 300px; height: 60px;" disabled></textarea>
+            <textarea type="text" class="form-control" style="width: 300px; height: 60px;" [readonly]="readOnly"></textarea>
         </div>
 
 
@@ -47,36 +48,36 @@
     <div class="form-row">
         <div class="form-group col-md-1">
             <label>Creado por:</label>
-            <input type="text" class="form-control" value="{{ maximo.creador | uppercase }}" disabled>
+            <input type="text" class="form-control" name="creador" [(ngModel)]="maximo.creador" value="{{ maximo.creador | uppercase }}" [readonly]="readOnly">
         </div>
 
         <div class="form-group col-md-2" style="margin-left: 15px;">
             <label>Nombre</label>
-            <input type="text" class="form-control" disabled>
+            <input type="text" class="form-control" [readonly]="readOnly">
         </div>
         <div class="form-group col-md-1" style="margin-left: 15px;">
             <label>¿Modification in progress?</label> <br>
-            <input class="form-check-input" type="checkbox" id="gridCheck" style="margin-left: 45px;">
+            <input class="form-check-input" name="modificacion_en_curso" [(ngModel)]="maximo.modificacion_en_curso" type="checkbox" checked="{{maximo.modificacion_en_curso}}" id="gridCheck" style="margin-left: 45px;" [readonly]="readOnly">
         </div>
 
 
 
         <div class="form-group col-md-1" style="margin-left: 15px;">
             <label>Grupo asignado</label>
-            <input type="text" class="form-control" style="width: 150px;" disabled>
+            <input type="text" class="form-control" style="width: 150px;" [readonly]="readOnly">
 
             <label style="margin-top: 18px;">Gestor de cambios</label>
-            <input type="text" class="form-control" style="width: 150px;" disabled>
+            <input type="text" class="form-control" style="width: 150px;" [readonly]="readOnly">
         </div>
 
         <div class="form-group col-md-1" style="margin-left: 55px;">
             <label>Telefono del técnico</label>
-            <input type="text" class="form-control" value="{{ maximo.telefono_tecnico | uppercase }}" disabled>
+            <input type="text" class="form-control" name="telefono_tecnico" [(ngModel)]="maximo.telefono_tecnico" value="{{ maximo.telefono_tecnico | uppercase }}" [readonly]="readOnly">
         </div>
 
         <div class="form-group col-md-1" style="margin-left: 55px; text-align: right;">
             <label>Number documents</label>
-            <input type="text" class="form-control" style="text-align: right;" placeholder="0" disabled>
+            <input type="text" class="form-control" style="text-align: right;" placeholder="0" [readonly]="readOnly">
         </div>
 
     </div>
@@ -89,18 +90,18 @@
 
         <div class="form-group col-md-2">
             <label>Ambito:</label>
-            <input type="text" class="form-control" value="{{ maximo.ambito | uppercase }}" style="width: 130px;" disabled>
+            <input type="text" class="form-control" name="ambito" [(ngModel)]="maximo.ambito" value="{{ maximo.ambito | uppercase }}" style="width: 130px;" [readonly]="readOnly">
 
 
             <div class="row g-1">
                 <div class="col">
                     <label class="form-label">Propietario:</label>
-                    <input type="text" class="form-control" value="{{ maximo.propietario | uppercase }}" disabled />
+                    <input type="text" class="form-control" name="propietario" [(ngModel)]="maximo.propietario" value="{{ maximo.propietario | uppercase }}" [readonly]="readOnly" />
 
                 </div>
                 <div class="col" style="margin-top: 9.5px;">
                     <br>
-                    <input type="text" id="form9Example2" class="form-control" disabled/>
+                    <input type="text" id="form9Example2" class="form-control" [readonly]="readOnly" />
 
                 </div>
             </div>
@@ -108,51 +109,51 @@
 
 
             <label>Servicio TI:</label>
-            <input type="text" class="form-control" value="{{ maximo.servicioti | uppercase }}" disabled>
+            <input type="text" class="form-control" name="servicioti" [(ngModel)]="maximo.servicioti" value="{{ maximo.servicioti | uppercase }}" [readonly]="readOnly">
 
             <label>Escenario:</label>
-            <input type="text" class="form-control" style="width: 150px;" disabled>
+            <input type="text" class="form-control" style="width: 150px;" [readonly]="readOnly">
 
             <div class="row g-1">
                 <div class="col">
                     <label class="form-label">CI:</label>
-                    <input type="text" class="form-control" value="{{ maximo.cinum | uppercase }}" disabled />
+                    <input type="text" class="form-control" name="cinum" [(ngModel)]="maximo.cinum" value="{{ maximo.cinum | uppercase }}" [readonly]="readOnly" />
 
                 </div>
                 <div class="col" style="margin-top: 9.5px;">
                     <br>
-                    <input type="email" id="form9Example2" class="form-control" disabled/>
+                    <input type="email" id="form9Example2" class="form-control" [readonly]="readOnly" />
 
                 </div>
             </div>
 
             <label>Nombre del CI:</label>
-            <input type="text" class="form-control" value="{{ maximo.ci | uppercase }}" disabled>
+            <input type="text" class="form-control" name="ci" [(ngModel)]="maximo.ci" value="{{ maximo.ci | uppercase }}" [readonly]="readOnly">
 
             <label>System Description:</label>
-            <input type="text" class="form-control" disabled>
+            <input type="text" class="form-control" [readonly]="readOnly">
         </div>
         <div class="form-group col-md-1" style="margin-left: 30px;">
             <label>Cliente:</label>
-            <input type="text" class="form-control" value="{{ maximo.cliente | uppercase }}" disabled>
+            <input type="text" class="form-control" name="cliente" [(ngModel)]="maximo.cliente" value="{{ maximo.cliente | uppercase }}" [readonly]="readOnly">
             <label>Nombre:</label>
-            <input type="text" class="form-control" disabled>
+            <input type="text" class="form-control" [readonly]="readOnly">
             <label>Impacto:</label>
-            <input type="text" class="form-control" value="{{ maximo.impacto | uppercase }}" disabled>
+            <input type="text" class="form-control" name="impacto" [(ngModel)]="maximo.impacto" value="{{ maximo.impacto | uppercase }}" [readonly]="readOnly">
             <label>Tipo de implementacion:</label>
-            <input type="text" class="form-control" value="{{ maximo.tipo_implementacion | uppercase }}" disabled>
+            <input type="text" class="form-control" name="tipo_implementacion" [(ngModel)]="maximo.tipo_implementacion" value="{{ maximo.tipo_implementacion | uppercase }}" [readonly]="readOnly">
         </div>
 
 
         <div class="form-group col-md-3" style="margin-left: 30px;">
             <label>Descripcion de la gestion:</label>
-            <input type="text" class="form-control" placeholder="Arquitectura" disabled>
+            <input type="text" class="form-control" placeholder="Arquitectura" [readonly]="readOnly">
             <label>Motivo del cambio:</label>
-            <input type="text" class="form-control" value="{{ maximo.motivo_cambio | uppercase }}" disabled>
+            <input type="text" class="form-control" name="motivo_cambio" [(ngModel)]="maximo.motivo_cambio" value="{{ maximo.motivo_cambio | uppercase }}" [readonly]="readOnly">
             <label>Descripción tecnica/funcional:</label>
-            <textarea type="text" class="form-control" placeholder="CANAL INFRAESTRUCTURA" style="width: 380px; height: 60px;" disabled></textarea>
+            <textarea type="text" class="form-control" placeholder="CANAL INFRAESTRUCTURA" style="width: 380px; height: 60px;" [readonly]="readOnly"></textarea>
             <label>Descripcion de Impacto:</label>
-            <input type="text" class="form-control" value="{{ maximo.desc_impacto | uppercase }}" disabled>
+            <input type="text" class="form-control" name="desc_impacto" [(ngModel)]="maximo.desc_impacto" value="{{ maximo.desc_impacto | uppercase }}" [readonly]="readOnly">
         </div>
 
 
@@ -173,11 +174,11 @@
         <div class="form-group col-md-1">
             <div class="form-group" style="margin-left: 15px;">
                 <label>Impacto de negocio</label>
-                <input type="text" class="form-control" value="{{ maximo.impacto_negocio | uppercase }}" disabled>
+                <input type="text" class="form-control" name="impacto_negocio" [(ngModel)]="maximo.impacto_negocio" value="{{ maximo.impacto_negocio | uppercase }}" [readonly]="readOnly">
             </div>
             <div class="form-group col-md-1">
-                <label>¿Validación y certificación?</label> <br>
-                <input class="form-check-input" type="checkbox" id="gridCheck" style="margin-left: 35px;">
+                <label>¿Validación y verificación?</label> <br>
+                <input class="form-check-input" type="checkbox" name="validacion_verificacion" [(ngModel)]="maximo.validacion_verificacion" checked="{{maximo.validacion_verificacion}}" id="gridCheck" style="margin-left: 35px;" [readonly]="readOnly">
             </div>
 
 
@@ -186,13 +187,13 @@
         <div class="form-group col-md-1">
             <div class="form-group" style="margin-left: 15px;">
                 <label>Afecta a aplicaciones VIP:</label>
-                <input type="text" class="form-control" value="{{ maximo.afecta_vip | uppercase }}" disabled>
+                <input type="text" class="form-control" name="afecta_vip" [(ngModel)]="maximo.afecta_vip" value="{{ maximo.afecta_vip | uppercase }}" [readonly]="readOnly">
             </div>
 
 
             <div class="form-group col-md-1">
                 <label>¿Contiene Componentes Criticos?</label> <br>
-                <input class="form-check-input" type="checkbox" id="gridCheck" style="margin-left: 35px;">
+                <input class="form-check-input" type="checkbox" name="compomentes_criticos" [(ngModel)]="maximo.compomentes_criticos" checked="{{maximo.compomentes_criticos}}" id="gridCheck" style="margin-left: 35px;" [readonly]="readOnly">
             </div>
 
         </div>
@@ -200,7 +201,7 @@
 
         <div class="form-group col-md-1">
             <div class="form-group" style="margin-left: 55px;">
-                <textarea type="text" class="form-control" placeholder="CANAL INFRAESTRUCTURA" style="width: 400px; height: 180px;"></textarea>
+                <textarea type="text" class="form-control" placeholder="" style="width: 400px; height: 180px;"></textarea>
             </div>
 
 
@@ -219,59 +220,62 @@
 
         <div class="form-group col-md-3">
             <label>Tipo de cambio:</label>
-            <input type="text" class="form-control" value="{{ maximo.tipo_cambio | uppercase }}" style="width: 120px;" disabled>
+            <input type="text" class="form-control" name="tipo_cambio" [(ngModel)]="maximo.tipo_cambio" value="{{ maximo.tipo_cambio | uppercase }}" style="width: 120px;" [readonly]="readOnly">
 
             <label>Tipo de urgencia:</label>
-            <input type="text" class="form-control" style="width: 160px;" disabled>
+            <input type="text" class="form-control" style="width: 160px;" [readonly]="readOnly">
 
             <label>Motivo de la urgencia:</label>
-            <input type="text" class="form-control" disabled>
+            <input type="text" class="form-control" [readonly]="readOnly">
 
             <label>Indisponibilidad durante la ejecución del cambio:</label>
-            <input type="text" class="form-control" value="{{ maximo.indisponibilidad | uppercase }}" style="width: 120px;" disabled>
+            <input type="text" class="form-control" name="indisponibilidad" [(ngModel)]="maximo.indisponibilidad" value="{{ maximo.indisponibilidad | uppercase }}" style="width: 120px;" [readonly]="readOnly">
 
             <label>Descripción de la Indisponibilidad:</label>
-            <input type="text" class="form-control" disabled>
+            <input type="text" class="form-control" [readonly]="readOnly">
         </div>
+
         <div class="form-group col-md-2" style="margin-left: 30px;">
+
             <label>¿Requiere IPL?</label>
-            <input type="text" class="form-control" value="{{ maximo.req_ipl | uppercase }}" style="width: 120px;" disabled>
+            <input type="text" class="form-control" name="req_ipl" [(ngModel)]="maximo.req_ipl" value="{{ maximo.req_ipl | uppercase }}" style="width: 120px;" [readonly]="readOnly">
             <label>¿Requiere parar todo el batch de los objetivos adicionales?</label>
-            <input type="text" class="form-control" value="{{ maximo.req_batch | uppercase }}" style="width: 120px;" disabled>
+            <input type="text" class="form-control" name="req_batch" [(ngModel)]="maximo.req_batch" value="{{ maximo.req_batch | uppercase }}" style="width: 120px;" [readonly]="readOnly">
             <label>¿Requiere intervencion de PI?</label>
-            <input type="text" class="form-control" value="{{ maximo.req_pi | uppercase }}" style="width: 120px;" disabled>
+            <input type="text" class="form-control" name="req_pi" [(ngModel)]="maximo.req_pi" value="{{ maximo.req_pi | uppercase }}" style="width: 120px;" [readonly]="readOnly">
             <label>Change category:</label>
-            <input type="text" class="form-control" style="width: 120px;" disabled>
+            <input type="text" class="form-control" style="width: 120px;" [readonly]="readOnly">
+
         </div>
 
 
         <div class="form-group col-md-2" style="margin-left: 30px;">
             <label>Dia de inicio de la ejecución:</label>
-            <input type="text" class="form-control" style="width: 120px;" disabled>
+            <input type="text" class="form-control" style="width: 120px;" [readonly]="readOnly">
             <label>Inicio programado:</label>
-            <input type="text" class="form-control" value="{{ maximo.schedstart | uppercase }}" style="width: 160px;" disabled>
+            <input type="text" class="form-control" name="schedstart" [(ngModel)]="maximo.schedstart" value="{{ maximo.schedstart | uppercase }}" style="width: 160px;" [readonly]="readOnly">
             <label>Duracion estimada (Incl. marcha atrás):</label>
-            <input type="text" class="form-control" value="{{ maximo.duracion_estimada | uppercase }}" style="width: 120px;" disabled>
+            <input type="text" class="form-control" name="duracion_estimada" [(ngModel)]="maximo.duracion_estimada" value="{{ maximo.duracion_estimada | uppercase }}" style="width: 120px;" [readonly]="readOnly">
             <label>Finalizacion programada:</label>
-            <input type="text" class="form-control" value="{{ maximo.schedfinish | uppercase }}" style="width: 160px;" disabled>
+            <input type="text" class="form-control" name="schedfinish" [(ngModel)]="maximo.schedfinish" value="{{ maximo.schedfinish | uppercase }}" style="width: 160px;" [readonly]="readOnly">
             <label>Duración marcha atrás:</label>
-            <input type="text" class="form-control" value="{{ maximo.duracion_ma | uppercase }}" style="width: 120px;" disabled>
+            <input type="text" class="form-control" name="duracion_ma" [(ngModel)]="maximo.duracion_ma" value="{{ maximo.duracion_ma | uppercase }}" style="width: 120px;" [readonly]="readOnly">
         </div>
 
 
         <div class="form-group col-md-2" style="margin-left: 30px;">
             <label>Fecha creación:</label>
-            <input type="text" class="form-control" value="{{ maximo.fecha_creacion | uppercase }}" style="width: 160px;" disabled>
+            <input type="text" class="form-control" name="fecha_creacion" [(ngModel)]="maximo.fecha_creacion" value="{{ maximo.fecha_creacion | uppercase }}" style="width: 160px;" [readonly]="readOnly">
             <label>Fecha Límite Entrega:</label>
-            <input type="text" class="form-control" value="{{ maximo.fecha_limite_entrega | uppercase }}" style="width: 160px;" disabled>
+            <input type="text" class="form-control" name="fecha_limite_entrega" [(ngModel)]="maximo.fecha_limite_entrega" value="{{ maximo.fecha_limite_entrega | uppercase }}" style="width: 160px;" [readonly]="readOnly">
             <label>Lead time en días:</label>
-            <input type="text" class="form-control" value="{{ maximo.leadtime | uppercase }}" style="width: 120px;" disabled>
+            <input type="text" class="form-control" name="leadtime" [(ngModel)]="maximo.leadtime" value="{{ maximo.leadtime | uppercase }}" style="width: 120px;" [readonly]="readOnly">
             <label>Categoria:</label>
-            <input type="text" class="form-control" value="{{ maximo.categoria | uppercase }}" style="width: 120px;" disabled>
+            <input type="text" class="form-control" name="categoria" [(ngModel)]="maximo.categoria" value="{{ maximo.categoria | uppercase }}" style="width: 120px;" [readonly]="readOnly">
 
             <div class="form-group">
                 <label>¿Incumple ventana de cambios?</label> <br>
-                <input class="form-check-input" type="checkbox" id="gridCheck" style="margin-left: 35px;">
+                <input class="form-check-input" type="checkbox" name="incumple_ventana" [(ngModel)]="maximo.incumple_ventana" checked="{{maximo.incumple_ventana}}" id="gridCheck" style="margin-left: 35px;" [readonly]="readOnly">
             </div>
 
         </div>
@@ -280,28 +284,28 @@
 
             <div class="form-group">
                 <label>¿Requiere mitigación de site/centro?</label> <br>
-                <input class="form-check-input" type="checkbox" id="gridCheck" style="margin-left: 35px;">
+                <input class="form-check-input" type="checkbox" name="req_mitiga" [(ngModel)]="maximo.req_mitiga" checked="{{maximo.req_mitiga}}" id="gridCheck" style="margin-left: 35px;" [readonly]="readOnly">
             </div>
 
             <div class="form-group" style="margin-top: 30px;">
                 <label>¿Requiere roll-out?</label> <br>
-                <input class="form-check-input" type="checkbox" id="gridCheck" style="margin-left: 35px;">
+                <input class="form-check-input" type="checkbox" name="req_rollout" [(ngModel)]="maximo.req_rollout" checked="{{maximo.req_rollout}}" id="gridCheck" style="margin-left: 35px;" [readonly]="readOnly">
             </div>
 
 
             <div class="form-group" style="margin-top: 30px;">
                 <label>¿Cambios en CMDB?</label> <br>
-                <input class="form-check-input" type="checkbox" id="gridCheck" style="margin-left: 35px;">
+                <input class="form-check-input" type="checkbox" name="cambios_cmdb" [(ngModel)]="maximo.cambios_cmdb" checked="{{maximo.cambios_cmdb}}" id="gridCheck" style="margin-left: 35px;" [readonly]="readOnly">
             </div>
 
             <div class="form-group" style="margin-top: 30px;">
                 <label>¿Cambios en documentación?</label> <br>
-                <input class="form-check-input" type="checkbox" id="gridCheck" style="margin-left: 35px;">
+                <input class="form-check-input" type="checkbox" name="cambios_doc" [(ngModel)]="maximo.cambios_doc" checked="{{maximo.cambios_doc}}" id="gridCheck" style="margin-left: 35px;" [readonly]="readOnly">
             </div>
 
             <div class="form-group" style="margin-top: 30px;">
                 <label>¿Afecta a réplicas?</label> <br>
-                <input class="form-check-input" type="checkbox" id="gridCheck" style="margin-left: 35px;">
+                <input class="form-check-input" type="checkbox" name="afecta_replica" [(ngModel)]="maximo.afecta_replica" checked="{{maximo.afecta_replica}}" id="gridCheck" style="margin-left: 35px;" [readonly]="readOnly">
             </div>
 
         </div>
@@ -311,7 +315,10 @@
 
     </div>
 
+    <div *ngIf="!readOnly">
+        <button type="button" value="Enviar" (click)="enviarMaximo()" class="btn btn-primary"> Enviar</button>
 
+    </div>
 
 </form>
 
@@ -327,5 +334,12 @@
     
     label {
         font-size: 13px;
+    }
+    
+    .btn-primary,
+    .btn-primary:hover,
+    .btn-primary:active,
+    .btn-primary:visited {
+        background-color: #19a0cd !important;
     }
 </style>
